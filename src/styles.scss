@@ -1,1 +1,374 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0b001a;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+hr {
+  width: 840px;
+}
+.animation img {
+  width: 270px;
+  height: 160px;
+}
+.animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  width: 100%;
+  height: 100vh;
+}
+.objects {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.txt {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+.txt1,
+.txt2,
+.txt3,
+.txt4 {
+  opacity: 0;
+}
+.txt2 h2 {
+  color: #01aa9b;
+}
+.txt4 h2 {
+  color: #01aa9b;
+}
+.link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.link .ul {
+  list-style: none;
+  display: flex;
+  opacity: 0;
+}
+.link .ul li {
+  margin: 0px 13px;
+}
+.link .ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: 0.5s;
+}
+.link .ul li a:hover {
+  color: #015e54;
+}
+.load {
+  display: flex;
+  border-radius: 50%;
+  flex-direction: row;
+  opacity: 0;
+}
+
+.progress {
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0.1em;
+  scale: 0;
+  border-radius: 50%;
+  background: #00b2a1;
+  animation: loading_492 2s ease infinite;
+  animation-delay: 1s;
+}
+
+@keyframes loading_492 {
+  50% {
+    scale: 1;
+  }
+}
+
+.progress:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.progress:nth-child(3) {
+  animation-delay: 1.7s;
+}
+.btn {
+  height: 70px;
+  margin: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 275px;
+  opacity: 0;
+}
+
+.btn a {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-radius: 30px; */
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.btn:hover a {
+  letter-spacing: 2px;
+}
+
+.btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translateX(0);
+  transition: 0.5s;
+}
+
+.btn:hover a::before {
+  transform: skewX(45deg) translateX(200%);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 10px;
+  width: 30px;
+  background: #00b2a1;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.btn:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5px;
+  height: 10px;
+  width: 30px;
+  background: #00b2a1;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.btn:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.5s;
+}
+
+.btn:nth-child(1):before,
+.btn:nth-child(1)::after {
+  background: #00b2a1;
+  box-shadow: 0 0 5px #03b185, 0 0 15px #00b2a1, 0 0 30px #02afa7,
+    0 0 60px #00b2a1;
+}
+
+.btn:active a {
+  color: #000;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Btn0 {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  margin-left: 50px;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(1, 151, 131, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00b2a1;
+  background: -moz-linear-gradient(
+    45deg,
+    #00b2a1 0%,
+    #04b4a3 25%,
+    #04b4a3 25%,
+    #05bdaa 75%,
+    #015e54 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #00b2a1 0%,
+    #04b4a3 25%,
+    #04b4a3 25%,
+    #05bdaa 75%,
+    #015e54 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #00b2a1 0%,
+    #04b4a3 25%,
+    #04b4a3 25%,
+    #05bdaa 75%,
+    #015e54 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  z-index: -1;
+  border-radius: 9px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.Btn0:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn0:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+}
+
+/* .spinner {
+  --size: 30px;
+  --first-block-clr: #02afa7;
+  --second-block-clr: #03b185;
+  --clr: #111;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  opacity: 0;
+}
+
+.spinner::after,
+.spinner::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  width: var(--size);
+  height: var(--size);
+  top: 50%;
+  animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+  left: 50%;
+  background: var(--first-block-clr);
+}
+
+.spinner::after {
+  background: var(--second-block-clr);
+  top: calc(50% - var(--size));
+  left: calc(50% - var(--size));
+  animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+}
+
+@keyframes down {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(100%) translateY(100%);
+  }
+
+  75% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes up {
+  0%,
+  100% {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+
+  75% {
+    transform: translateY(-100%);
+  }
+}
+ */
